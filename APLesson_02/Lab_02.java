@@ -20,6 +20,6 @@ public class Lab_02
 		int h = 5;
 		int SA = l * w * h;
 		
-		System.out.println("The surface area of your rectangel is " + SA);
+		System.out.println("The surface area of your rectangle is " + SA);
 	}
 }

@@ -30,18 +30,24 @@ public class Ex_02
 		System.out.println("Enter the price: ");
 		double price4 = kb.nextDouble();
 		
+		String subtotal = "Subtotal: ";
 		double sub = price1 + price2 + price3 + price4;
-		
+		String disct = "Discount: ";
 		double d = discount(sub);
-
+		double tax = 0.0065*sub;
+		String t = "Total: ";
+		double total = sub - 0.01*d*sub + tax;
 		
 		System.out.println("<<<<<<<<<<< Receipt >>>>>>>>>>>");
 		format(item1, price1);
 		format(item2, price2);
 		format(item3, price3);
 		format(item4, price4);
-		System.out.println("\nDiscount: " + discount(sub));
+		format(subtotal, sub);
+		format(disct, discount(sub));
+		format(t, total);
 		System.out.println("\n_______________________________");
+		System.out.println("* Thank you for your support *");
 	}
 	
 	public static double discount(double s)

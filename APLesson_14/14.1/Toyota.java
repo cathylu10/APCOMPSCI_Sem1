@@ -1,5 +1,5 @@
 import java.util.Arrays;
-public class Toyota implements Location
+public class Toyota extends Car
 {
 	private String loc;
 	
@@ -20,7 +20,11 @@ public class Toyota implements Location
 	
 	public void move(double x, double y)
 	{
-		loc = "" + x + ", " + y;
+		String[] locate = loc.split(", ");
+		double[] l = new double[2];
+		l[0] = Double.parseDouble(locate[0]) + x;
+		l[1] = Double.parseDouble(locate[1]) + y;
+		loc = "" + l[0] + ", " + l[1];
 	}
 	
 	public double[] getLoc()

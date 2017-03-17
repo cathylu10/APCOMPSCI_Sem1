@@ -41,7 +41,7 @@ public class Satellite
 				
 		for(Location l : locate)
 		{
-			((Car)l).move(one, two);
+			l.move(one, two);
 			System.out.printf("\nAfter %d Moved (%.2f, %.2f)\nNew Location: (%s)", l.getID(), one, two, getLocation(l.getLoc()));
 		}
 		

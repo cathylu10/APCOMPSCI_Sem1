@@ -50,6 +50,30 @@ public class PictureTester
     caterpillar.explore();
   }
   
+  public static void testMirrorVerticalRightToLeft()
+  {
+	Picture beach = new Picture("beach.jpg");
+	beach.explore();
+	beach.mirrorVerticalRightToLeft();
+	beach.explore();
+  }
+  
+  public static void testMirrorHorizontal()
+  {
+	Picture beach = new Picture("beach.jpg");
+	beach.explore();
+	beach.mirrorHorizontal();
+	beach.explore();
+  }
+  
+  public static void testMirrorHorizontalBottomToTop()
+  {
+	Picture beach = new Picture("beach.jpg");
+	beach.explore();
+	beach.mirrorHorizontalBottomToTop();
+	beach.explore();
+  }
+  
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -57,6 +81,37 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+  
+  public static void testMirrorGull()
+  {
+	  Picture seagull = new Picture("seagull.jpg");
+	  seagull.explore();
+	  seagull.mirrorGull();
+	  seagull.explore();
+  }
+  
+  public static void testCopy1()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  Picture water = new Picture("water.jpg");
+	  water.copy1(beach, 0, 100, 0, 100, 200, 200);
+	  water.explore();
+  }
+  
+  public static void testMyCollage()
+  {
+	  Picture beach = new Picture("beach.jpg");
+	  beach.myCollage();
+	  beach.explore();
   }
   
   /** Method to test the collage method */
@@ -75,6 +130,13 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testFixUnderwater()
+  {
+	  Picture water = new Picture("water.jpg");
+	  water.fixUnderwater();
+	  water.explore();
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -87,16 +149,21 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
-    testGrayscale();
+    //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
+	//testMirrorVerticalRightToLeft();
+	//testMirrorHorizontal();
+	//testMirrorHorizontalBottomToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
-    //testEdgeDetection();
+	//testCopy1();
+	//testMyCollage();
+    testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
     //testEncodeAndDecode();

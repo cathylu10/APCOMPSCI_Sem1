@@ -22,7 +22,7 @@ public class Magpie2
 		 * 	enter. Think to yourself: "What is the length of
 		 * 	an empty String?" */
 		
-		if(statement.length() == 0)
+		if(statement.trim().length() == 0)
 		{
 			return "Say something, please.";
 		}
@@ -241,15 +241,8 @@ public class Magpie2
 			{
 				return psn;
 			}
-			else
-			{
-				if(phrase.indexOf(goal, psn + 1) > 0)
-				{
-					findKeyword(phrase, goal, psn + 1);
-				}
-				else
-					return -1;
-			}
+			
+			psn = phrase.indexOf(goal, psn +1);
 		}
 
 		return -1;
